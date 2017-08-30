@@ -19,7 +19,7 @@
     mongoose.connect("mongodb://localhost/muber", { useMongoClient: true });
   ```
 
-  Use testing db in testing in testing helper
+  Use testing db and reset db for each test case
 
 
 
