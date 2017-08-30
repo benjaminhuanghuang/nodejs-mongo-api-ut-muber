@@ -1,5 +1,6 @@
 const DriversController = require('../controllers/drivers_controller')
 
+// Assign HTTP request to controller methods
 module.exports = app => {
   app.get("/api", DriversController.greeting);
 
