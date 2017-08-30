@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-mongo-muber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "nodemon --exec 'mocha --recursive -R min'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminhuanghuang/nodejs-mongo-muber.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminhuanghuang/nodejs-mongo-muber/issues"
+  },
+  "homepage": "https://github.com/benjaminhuanghuang/nodejs-mongo-muber#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "mongoose": "^4.11.9",
+    "body-parser": "^1.17.2"
+  },
+  "devDependencies": {
+    "mocha": "^3.5.0",
+    "supertest": "^3.0.0"
+  }
+}
