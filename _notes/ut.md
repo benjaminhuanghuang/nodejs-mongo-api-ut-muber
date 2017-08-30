@@ -9,4 +9,17 @@
   npm install -D supertest
 
 
-## 
+## Separate testing database
+  In npm script, we can define the environment variables
+    "test": "NODE_ENV=test nodemon --exec 'mocha'"    
+
+  Use production db in app
+  ```
+  if (process.env.NODE_ENV !== "test")
+    mongoose.connect("mongodb://localhost/muber", { useMongoClient: true });
+  ```
+
+  Use testing db in testing in testing helper
+
+
+

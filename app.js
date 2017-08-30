@@ -5,7 +5,10 @@ const routes = require("./routes/routes");
 const app = express();
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/muber", { useMongoClient: true });
+
+// Use testing database for testing
+if (process.env.NODE_ENV !== "test")
+  mongoose.connect("mongodb://localhost/muber", { useMongoClient: true });
 
 // middleware
 app.use(bodyParser.json());
