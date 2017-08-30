@@ -22,5 +22,16 @@ module.exports = {
       .then(driver => res.send(driver))
       .catch(next);
   },
+
+  // for /driver/:id
+  delete(req, res, next) {
+    const driverId = req.params.id;
+    const driverProps = req.body;
+
+    // new : bool  true to return the modified document rather than the original. defaults to false
+    Driver.findByIdAndRemove({_id: driverId})
+      .then(driver => res.status(204).send(driver))
+      .catch(next);
+  },
 };
  
