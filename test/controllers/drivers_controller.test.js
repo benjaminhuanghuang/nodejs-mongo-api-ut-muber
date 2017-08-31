@@ -64,9 +64,9 @@ describe("Drivers controller", () => {
       request(app)
         .get("/api/drivers?lng=-80&lat=25")
         .end((err, res) => {
-          console.log("body", res.body);
           assert(res.body.length === 1);
           assert(res.body[0].obj.email === "miami@t.com");
+          done();
         });
     });
   });
